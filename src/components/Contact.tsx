@@ -7,6 +7,7 @@ import { Card, CardContent } from "./ui/card";
 import { Phone, Mail, Linkedin, Car, Download } from "lucide-react";
 import { toast } from "sonner";
 import { SectionTitle } from "./SectionTitle";
+import cvFile from "../assets/CV_Alexis_Maugain.png";
 
 const contactInfo = [
   {
@@ -55,19 +56,11 @@ export function Contact() {
       ...formData,
       [e.target.name]: e.target.value,
     });
-  };
-
-  const handleDownloadCV = () => {
-    // Chemin vers le CV dans le dossier public
-    const cvPath = process.env.NODE_ENV === 'production' 
-      ? '/Portfolio-Website-for-Alexis/documents/CV_Alexis_Maugain.png'
-      : '/documents/CV_Alexis_Maugain.png';
-    
-    // Créer un lien temporaire pour le téléchargement
+  };  const handleDownloadCV = () => {
+    // Créer un lien pour télécharger le fichier importé
     const link = document.createElement('a');
-    link.href = cvPath;
+    link.href = cvFile;
     link.download = 'CV_Alexis_Maugain.png';
-    link.target = '_blank';
     
     // Déclencher le téléchargement
     document.body.appendChild(link);
@@ -75,7 +68,7 @@ export function Contact() {
     document.body.removeChild(link);
     
     // Notification de succès
-    toast.success("Téléchargement du CV en cours...");
+    toast.success("CV téléchargé avec succès !");
   };
 
   return (
@@ -155,10 +148,9 @@ export function Contact() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >            <Button
               className="w-full bg-primary hover:bg-primary/90 text-white rounded-full py-6"
-              onClick={handleDownloadCV}
-            >
+              onClick={handleDownloadCV}            >
                 <Download className="w-5 h-5 mr-2" />
-                Télécharger le CV en PDF
+                Télécharger le CV
               </Button>
             </motion.div>
           </motion.div>
