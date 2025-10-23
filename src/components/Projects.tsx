@@ -126,7 +126,7 @@ const projects = [
     category: "3D",
     image: "https://images.unsplash.com/photo-1668672355709-a2f199a65201?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzZCUyMGFyY2hpdGVjdHVyZSUyMHJlbmRlcnxlbnwxfHx8fDE3NjEwNTQwNDd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     link: "#",
-    size: "tall",
+    size: "medium",
   },
   {
     id: 12,

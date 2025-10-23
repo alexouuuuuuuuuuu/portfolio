@@ -57,6 +57,27 @@ export function Contact() {
     });
   };
 
+  const handleDownloadCV = () => {
+    // Chemin vers le CV dans le dossier public
+    const cvPath = process.env.NODE_ENV === 'production' 
+      ? '/Portfolio-Website-for-Alexis/documents/CV_Alexis_Maugain.png'
+      : '/documents/CV_Alexis_Maugain.png';
+    
+    // Créer un lien temporaire pour le téléchargement
+    const link = document.createElement('a');
+    link.href = cvPath;
+    link.download = 'CV_Alexis_Maugain.png';
+    link.target = '_blank';
+    
+    // Déclencher le téléchargement
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    // Notification de succès
+    toast.success("Téléchargement du CV en cours...");
+  };
+
   return (
     <section className="py-20 bg-white relative overflow-hidden" id="contact">
       {/* Background decoration */}
@@ -132,11 +153,10 @@ export function Contact() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
+            >            <Button
+              className="w-full bg-primary hover:bg-primary/90 text-white rounded-full py-6"
+              onClick={handleDownloadCV}
             >
-              <Button
-                className="w-full bg-primary hover:bg-primary/90 text-white rounded-full py-6"
-                onClick={() => toast.info("Le téléchargement du CV commencera bientôt")}
-              >
                 <Download className="w-5 h-5 mr-2" />
                 Télécharger le CV en PDF
               </Button>
