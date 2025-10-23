@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Card, CardContent } from "./ui/card";
 import { Phone, Mail, Linkedin, Car, Download } from "lucide-react";
-import { useState } from "react";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 import { SectionTitle } from "./SectionTitle";
 
 const contactInfo = [

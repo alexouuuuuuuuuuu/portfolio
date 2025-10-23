@@ -5,7 +5,7 @@
 
   export default defineConfig({
   plugins: [react()],
-  base: '/Portfolio/', // Remplacez par le nom de votre repository
+  base: process.env.NODE_ENV === 'production' ? '/Portfolio-Website-for-Alexis/' : '/',
   resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
