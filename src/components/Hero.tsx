@@ -85,7 +85,7 @@ export function Hero({ onScrollToProjects }: HeroProps) {
                 </h1>
                 {/* Decorative underline */}
                 <motion.div
-                  className="h-2 bg-gradient-to-r from-[#FFD700] via-[#CCE0F5] to-[#AFC7E3] rounded-full shadow-lg"
+                  className="h-2 rounded-full shadow-lg"
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
                   transition={{ delay: 0.8, duration: 0.8 }}
@@ -110,9 +110,9 @@ export function Hero({ onScrollToProjects }: HeroProps) {
               transition={{ delay: 0.8, duration: 0.6 }}
               className="text-white text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 drop-shadow-lg"
             >
-              Passionné par le <span className="text-[#CCE0F5] font-semibold drop-shadow-[0_2px_8px_rgba(204,224,245,0.8)]">design</span>, 
-              le <span className="text-[#FFD700] font-semibold drop-shadow-[0_2px_8px_rgba(255,215,0,0.8)]">web</span> et 
-              l'<span className="text-[#CCE0F5] font-semibold drop-shadow-[0_2px_8px_rgba(204,224,245,0.8)]">interactivité</span>.
+              Passionné par le <span className="text-[#CCE0F5] font-semibold ">design</span>, 
+              le <span className="text-[#FFD700] font-semibold">web</span> et 
+              l'<span className="text-[#CCE0F5] font-semibold ">interactivité</span>.
               <br />
               Je conçois des expériences numériques qui allient esthétique et fonctionnalité.
             </motion.p>
