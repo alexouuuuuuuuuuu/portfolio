@@ -16,3 +16,12 @@ npm install react react-dom framer-motion lucide-react
 
 npm install --save-dev typescript @types/react @types/react-dom
 npx tsc --init
+
+npm install -D @types/react @types/react-dom
+
+npm install react react-dom
+
+
+
+git config user.email "mail"
+git config  user.name "alexouuuuuuuuuuu"     
