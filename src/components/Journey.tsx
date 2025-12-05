@@ -66,65 +66,64 @@ const skillCategories = [
     color: "from-[#4a5d7a] to-[#2E3B52]",
   },
 ];
-
 const softwareCategories = [
   {
     name: "Design Graphique",
     color: "#FF9A00",
     tools: [
-      { name: "Illustrator", icon: "Ai", color: "#FF9A00" },
-      { name: "Photoshop", icon: "Ps", color: "#31A8FF" },
-      { name: "InDesign", icon: "Id", color: "#FF3366" },
+      { image: "./src/assets/logitiels/illustrator.png", color: "#FF9A00" },
+      { image: "./src/assets/logitiels/photoshop.png", color: "#31A8FF" },
+      { image: "./src/assets/logitiels/indesign.png", color: "#FF3366" },
     ],
   },
   {
     name: "UI/UX",
     color: "#A259FF",
     tools: [
-      { name: "Figma", icon: "Fg", color: "#A259FF" },
-      { name: "Adobe XD", icon: "Xd", color: "#FF61F6" },
+      { image: "./src/assets/logitiels/figma.png", color: "#A259FF" },
+      { image: "./src/assets/logitiels/adobe-xd.png", color: "#FF61F6" },
     ],
   },
   {
     name: "Vidéo & Motion",
     color: "#9999FF",
     tools: [
-      { name: "Premiere Pro", icon: "Pr", color: "#9999FF" },
-      { name: "After Effects", icon: "Ae", color: "#9999FF" },
+      { image: "./src/assets/logitiels/premiere-pro.png", color: "#9999FF" },
+      { image: "./src/assets/logitiels/after-effects.png", color: "#9999FF" },
     ],
   },
   {
     name: "3D",
     color: "#FF8C00",
     tools: [
-      { name: "Blender", icon: "Bl", color: "#FF8C00" },
+      { image: "./src/assets/logitiels/blender.png", color: "#FF8C00" },
     ],
   },
   {
     name: "Développement",
     color: "#61DAFB",
     tools: [
-      { name: "HTML", icon: "<>", color: "#E34F26" },
-      { name: "CSS", icon: "{}",  color: "#1572B6" },
-      { name: "JavaScript", icon: "JS", color: "#F7DF1E" },
+      { image: "./src/assets/logitiels/html.png", color: "#E34F26" },
+      { image: "./src/assets/logitiels/css.png", color: "#1572B6" },
+      { image: "./src/assets/logitiels/javascript.png", color: "#F7DF1E" },
     ],
   },
 ];
 
-// Flatten all tools for grid display
+// Flatten all tools for grid display with image paths
 const allSoftware = [
-  { name: "Illustrator", icon: "Ai", color: "#FF9A00", category: "Design" },
-  { name: "Photoshop", icon: "Ps", color: "#31A8FF", category: "Design" },
-  { name: "InDesign", icon: "Id", color: "#FF3366", category: "Design" },
-  { name: "Figma", icon: "Fg", color: "#A259FF", category: "UI/UX" },
-  { name: "Adobe XD", icon: "Xd", color: "#FF61F6", category: "UI/UX" },
-  { name: "Premiere Pro", icon: "Pr", color: "#9999FF", category: "Vidéo" },
-  { name: "After Effects", icon: "Ae", color: "#9999FF", category: "Motion" },
-  { name: "Blender", icon: "Bl", color: "#FF8C00", category: "3D" },
-  { name: "HTML", icon: "<>", color: "#E34F26", category: "Web" },
-  { name: "CSS", icon: "{}", color: "#1572B6", category: "Web" },
-  { name: "JavaScript", icon: "JS", color: "#F7DF1E", category: "Web" },
-  { name: "WordPress", icon: "WP", color: "#21759B", category: "CMS" },
+  { name: "Illustrator", image: "./src/assets/logiciels/illustrator.svg", color: "#FF9A00", category: "Design" },
+  { name: "Photoshop", image: "./src/assets/logiciels/photoshop.svg", color: "#31A8FF", category: "Design" },
+  { name: "InDesign", image: "./src/assets/logiciels/indesign.svg", color: "#FF3366", category: "Design" },
+  { name: "Figma", image: "./src/assets/logiciels/figma.svg", color: "#A259FF", category: "UI/UX" },
+  { name: "Premiere Pro", image: "./src/assets/logiciels/premiere-pro.svg", color: "#9999FF", category: "Vidéo" },
+  { name: "After Effects", image: "./src/assets/logiciels/after-effects.svg", color: "#9999FF", category: "Motion" },
+  { name: "Blender", image: "./src/assets/logiciels/blender.svg", color: "#FF8C00", category: "3D" },
+  { name: "HTML", image: "./src/assets/logiciels/html.svg", color: "#E34F26", category: "Web" },
+  { name: "CSS", image: "./src/assets/logiciels/css.svg", color: "#1572B6", category: "Web" },
+  { name: "JavaScript", image: "./src/assets/logiciels/js.svg", color: "#F7DF1E", category: "Web" },
+  { name: "PHP", image: "./src/assets/logiciels/php.svg", color: "#777BB3", category: "Web" },
+  { name: "WordPress", image: "./src/assets/logiciels/wordpress.svg", color: "#21759B", category: "CMS" },
 ];
 
 export function Journey() {
@@ -225,11 +224,41 @@ export function Journey() {
                     <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-white/50">
                       {/* Icon/Emoji based on skill */}
                       <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                        {index === 0 && "🎨"}
-                        {index === 1 && "💻"}
-                        {index === 2 && "📢"}
-                        {index === 3 && "📊"}
-                        {index === 4 && "🎬"}
+                        {index === 0 && (
+                          <img
+                            src="./src/assets/icones/palette.svg"
+                            alt="Design"
+                            className="mx-auto w-10 h-10 object-contain"
+                          />
+                        )}
+                        {index === 1 && (
+                          <img
+                            src="./src/assets/icones/ordinateur.svg"
+                            alt="Développement"
+                            className="mx-auto w-10 h-10 object-contain"
+                          />
+                        )}
+                        {index === 2 && (
+                          <img
+                            src="./src/assets/icones/speaker.svg"
+                            alt="Communication"
+                            className="mx-auto w-10 h-10 object-contain"
+                          />
+                        )}
+                        {index === 3 && (
+                          <img
+                            src="./src/assets/icones/calendrier.svg"
+                            alt="Gestion de projet"
+                            className="mx-auto w-10 h-10 object-contain"
+                          />
+                        )}
+                        {index === 4 && (
+                          <img
+                            src="./src/assets/icones/camera.svg"
+                            alt="Audiovisuel"
+                            className="mx-auto w-10 h-10 object-contain"
+                          />
+                        )}
                       </div>
                       
                       {/* Skill name */}
@@ -237,14 +266,6 @@ export function Journey() {
                         {skill}
                       </h4>
                       
-                      {/* Decorative line */}
-                      <motion.div
-                        className="h-1 bg-gradient-to-r from-transparent via-[#FFD700] to-transparent rounded-full mt-3"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: "100%" }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
-                      />
                     </div>
                   </motion.div>
                 ))}
@@ -282,7 +303,9 @@ export function Journey() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="mb-12 text-center text-primary">Logiciels maîtrisés</h3>
+            <SectionTitle subtitle="Outils et logiciels vu au cours de ma formation et mes expériences.">
+              Logiciels maîtrisés
+            </SectionTitle>
             
             {/* Modern Grid Layout */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
@@ -310,14 +333,18 @@ export function Journey() {
                     
                     {/* Content */}
                     <div className="relative flex flex-col items-center gap-3">
-                      {/* Logo Icon */}
+                      {/* Logo Image */}
                       <motion.div
-                        className="w-16 h-16 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300"
-                        style={{ backgroundColor: software.color }}
+                        className="w-16 h-16 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 bg-white"
                         whileHover={{ rotate: [0, -5, 5, 0] }}
                         transition={{ duration: 0.5 }}
+                        style={{ overflow: "hidden" }}
                       >
-                        <span className="text-white text-xl">{software.icon}</span>
+                        <img
+                          src={software.image}
+                          alt={software.name}
+                          className="w-10 h-10 object-contain"
+                        />
                       </motion.div>
                       
                       {/* Name */}
