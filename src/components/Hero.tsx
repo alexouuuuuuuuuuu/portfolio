@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { ArrowDown } from "lucide-react";
-import { Avatar } from "./Avatar";
 
 interface HeroProps {
   onScrollToProjects: () => void;
@@ -30,13 +29,17 @@ export function Hero({ onScrollToProjects }: HeroProps) {
             transition={{ duration: 0.8 }}
             className="flex-1 text-center lg:text-left"
           >
-            {/* Avatar with creative frame */}
+            {/* Photo with creative frame */}
             <div className="relative inline-block mb-8">
               <div className="relative">
-                <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-[#AFC7E3] shadow-2xl relative z-10 bg-white">
-                  <Avatar />
+                <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-[#AFC7E3] shadow-2xl relative z-10 bg-transparent">
+                  <img
+                    src="./src/assets/moi.png"
+                    alt="Photo de moi"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                
+
                 {/* Decorative rotating circles */}
                 <motion.div
                   className="absolute -inset-4 rounded-full border-2 border-dashed border-[#CCE0F5]"
@@ -72,12 +75,12 @@ export function Hero({ onScrollToProjects }: HeroProps) {
                     Alexis
                   </span>
                   <br />
-                  <span 
+                  <span
                     className="bg-gradient-to-r from-[#CCE0F5] via-[#AFC7E3] to-[#CCE0F5] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(204,224,245,0.6)]"
-                    style={{ 
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      filter: 'drop-shadow(0 2px 4px rgba(175, 199, 227, 0.5))',
+                    style={{
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      filter: "drop-shadow(0 2px 4px rgba(175, 199, 227, 0.5))",
                     }}
                   >
                     Maugain
@@ -189,8 +192,8 @@ export function Hero({ onScrollToProjects }: HeroProps) {
                     top: skill.y,
                   }}
                   initial={{ scale: 0, opacity: 0 }}
-                  animate={{ 
-                    scale: 1, 
+                  animate={{
+                    scale: 1,
                     opacity: 1,
                     y: [0, -10, 0],
                   }}
