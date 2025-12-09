@@ -7,6 +7,8 @@ import { Journey } from "./components/Journey";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { LoadingScreen } from "./components/LoadingScreen";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Oliveoil } from "./components/Oliveoil";
 
 export default function App() {
   const projectsRef = useRef<HTMLDivElement>(null);

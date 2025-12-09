@@ -15,7 +15,7 @@ const projects = [
     technologies: ["Figma", "Prototyping", "User Research"],
     categories: ["UI/UX"], 
     image: "./assets/projets/olive-oil.png",
-    link: "/Oliveoil",
+    link: "./portfolio/Oliveoil",
     size: "large",
   },
   {
