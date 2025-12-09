@@ -10,7 +10,7 @@ const projects = [
   {
     id: 1,
     title: "One page pour Olive Oil",
-    description: "créer un site internet pour une marque d'huile d'olive reflétant leur encrage territorial ainsi que l'univers prestigieux de la marque",
+    description: "aacréer un site internet pour une marque d'huile d'olive reflétant leur encrage territorial ainsi que l'univers prestigieux de la marque",
     fullDescription: "Olive Oil, marque d'huile d'olive 100 % italienne, lance sa nouvelle huile premium avec des ingrédients haut de gamme. Pour accompagner ce lancement, ils souhaitent créer un site internet reflétant leur encrage territorial ainsi que l'univers prestigieux de la marque, destiné à une clientèle exigeante. Le design du site devra être élégant, moderne et raffiné, tout en respectant l'identité visuelle existante (couleurs, typographie, logo).Le contenu présentera de manière claire et originale la marque, ses valeurs et son produit. L'expérience utilisateur devra inciter à l’achat, tout en véhiculant une ambiance exclusive et sophistiquée.",
     technologies: ["Figma", "Prototyping", "User Research"],
     categories: ["UI/UX"], 
