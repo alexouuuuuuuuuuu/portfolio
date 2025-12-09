@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logoImage from "../assets/logo.png";
+import logoImage from "/assets/logo.png";
 
 interface LogoProps {
   variant?: "light" | "dark";

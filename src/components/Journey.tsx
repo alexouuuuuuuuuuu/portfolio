@@ -71,59 +71,59 @@ const softwareCategories = [
     name: "Design Graphique",
     color: "#FF9A00",
     tools: [
-      { image: "./src/assets/logitiels/illustrator.png", color: "#FF9A00" },
-      { image: "./src/assets/logitiels/photoshop.png", color: "#31A8FF" },
-      { image: "./src/assets/logitiels/indesign.png", color: "#FF3366" },
+      { image: "/assets/logitiels/illustrator.png", color: "#FF9A00" },
+      { image: "/assets/logitiels/photoshop.png", color: "#31A8FF" },
+      { image: "/assets/logitiels/indesign.png", color: "#FF3366" },
     ],
   },
   {
     name: "UI/UX",
     color: "#A259FF",
     tools: [
-      { image: "./src/assets/logitiels/figma.png", color: "#A259FF" },
-      { image: "./src/assets/logitiels/adobe-xd.png", color: "#FF61F6" },
+      { image: "/assets/logitiels/figma.png", color: "#A259FF" },
+      { image: "/assets/logitiels/adobe-xd.png", color: "#FF61F6" },
     ],
   },
   {
     name: "Vidéo & Motion",
     color: "#9999FF",
     tools: [
-      { image: "./src/assets/logitiels/premiere-pro.png", color: "#9999FF" },
-      { image: "./src/assets/logitiels/after-effects.png", color: "#9999FF" },
+      { image: "/assets/logitiels/premiere-pro.png", color: "#9999FF" },
+      { image: "/assets/logitiels/after-effects.png", color: "#9999FF" },
     ],
   },
   {
     name: "3D",
     color: "#FF8C00",
     tools: [
-      { image: "./src/assets/logitiels/blender.png", color: "#FF8C00" },
+      { image: "/assets/logitiels/blender.png", color: "#FF8C00" },
     ],
   },
   {
     name: "Développement",
     color: "#61DAFB",
     tools: [
-      { image: "./src/assets/logitiels/html.png", color: "#E34F26" },
-      { image: "./src/assets/logitiels/css.png", color: "#1572B6" },
-      { image: "./src/assets/logitiels/javascript.png", color: "#F7DF1E" },
+      { image: "/assets/logitiels/html.png", color: "#E34F26" },
+      { image: "/assets/logitiels/css.png", color: "#1572B6" },
+      { image: "/assets/logitiels/javascript.png", color: "#F7DF1E" },
     ],
   },
 ];
 
 // Flatten all tools for grid display with image paths
 const allSoftware = [
-  { name: "Illustrator", image: "./src/assets/logiciels/illustrator.svg", color: "#FF9A00", category: "Design" },
-  { name: "Photoshop", image: "./src/assets/logiciels/photoshop.svg", color: "#31A8FF", category: "Design" },
-  { name: "InDesign", image: "./src/assets/logiciels/indesign.svg", color: "#FF3366", category: "Design" },
-  { name: "Figma", image: "./src/assets/logiciels/figma.svg", color: "#A259FF", category: "UI/UX" },
-  { name: "Premiere Pro", image: "./src/assets/logiciels/premiere-pro.svg", color: "#9999FF", category: "Vidéo" },
-  { name: "After Effects", image: "./src/assets/logiciels/after-effects.svg", color: "#9999FF", category: "Motion" },
-  { name: "Blender", image: "./src/assets/logiciels/blender.svg", color: "#FF8C00", category: "3D" },
-  { name: "HTML", image: "./src/assets/logiciels/html.svg", color: "#E34F26", category: "Web" },
-  { name: "CSS", image: "./src/assets/logiciels/css.svg", color: "#1572B6", category: "Web" },
-  { name: "JavaScript", image: "./src/assets/logiciels/js.svg", color: "#F7DF1E", category: "Web" },
-  { name: "PHP", image: "./src/assets/logiciels/php.svg", color: "#777BB3", category: "Web" },
-  { name: "WordPress", image: "./src/assets/logiciels/wordpress.svg", color: "#21759B", category: "CMS" },
+  { name: "Illustrator", image: "/assets/logiciels/illustrator.svg", color: "#FF9A00", category: "Design" },
+  { name: "Photoshop", image: "/assets/logiciels/photoshop.svg", color: "#31A8FF", category: "Design" },
+  { name: "InDesign", image: "/assets/logiciels/indesign.svg", color: "#FF3366", category: "Design" },
+  { name: "Figma", image: "/assets/logiciels/figma.svg", color: "#A259FF", category: "UI/UX" },
+  { name: "Premiere Pro", image: "/assets/logiciels/premiere-pro.svg", color: "#9999FF", category: "Vidéo" },
+  { name: "After Effects", image: "/assets/logiciels/after-effects.svg", color: "#9999FF", category: "Motion" },
+  { name: "Blender", image: "/assets/logiciels/blender.svg", color: "#FF8C00", category: "3D" },
+  { name: "HTML", image: "/assets/logiciels/html.svg", color: "#E34F26", category: "Web" },
+  { name: "CSS", image: "/assets/logiciels/css.svg", color: "#1572B6", category: "Web" },
+  { name: "JavaScript", image: "/assets/logiciels/js.svg", color: "#F7DF1E", category: "Web" },
+  { name: "PHP", image: "/assets/logiciels/php.svg", color: "#777BB3", category: "Web" },
+  { name: "WordPress", image: "/assets/logiciels/wordpress.svg", color: "#21759B", category: "CMS" },
 ];
 
 export function Journey() {
@@ -226,35 +226,35 @@ export function Journey() {
                       <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
                         {index === 0 && (
                           <img
-                            src="./src/assets/icones/palette.svg"
+                            src="/assets/icones/palette.svg"
                             alt="Design"
                             className="mx-auto w-10 h-10 object-contain"
                           />
                         )}
                         {index === 1 && (
                           <img
-                            src="./src/assets/icones/ordinateur.svg"
+                            src="/assets/icones/ordinateur.svg"
                             alt="Développement"
                             className="mx-auto w-10 h-10 object-contain"
                           />
                         )}
                         {index === 2 && (
                           <img
-                            src="./src/assets/icones/speaker.svg"
+                            src="/assets/icones/speaker.svg"
                             alt="Communication"
                             className="mx-auto w-10 h-10 object-contain"
                           />
                         )}
                         {index === 3 && (
                           <img
-                            src="./src/assets/icones/calendrier.svg"
+                            src="/assets/icones/calendrier.svg"
                             alt="Gestion de projet"
                             className="mx-auto w-10 h-10 object-contain"
                           />
                         )}
                         {index === 4 && (
                           <img
-                            src="./src/assets/icones/camera.svg"
+                            src="/assets/icones/camera.svg"
                             alt="Audiovisuel"
                             className="mx-auto w-10 h-10 object-contain"
                           />

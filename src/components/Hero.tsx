@@ -34,7 +34,7 @@ export function Hero({ onScrollToProjects }: HeroProps) {
               <div className="relative">
                 <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-[#AFC7E3] shadow-2xl relative z-10 bg-transparent">
                   <img
-                    src="./src/assets/moi.png"
+                    src="/assets/moi.png"
                     alt="Photo de moi"
                     className="w-full h-full object-cover"
                   />

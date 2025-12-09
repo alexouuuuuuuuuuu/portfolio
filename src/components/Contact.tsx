@@ -7,7 +7,7 @@ import { Card, CardContent } from "./ui/card";
 import { Phone, Mail, Linkedin, Car, Download } from "lucide-react";
 import { toast } from "sonner";
 import { SectionTitle } from "./SectionTitle";
-import cvFile from "../assets/CV_Alexis_Maugain.png";
+import cvFile from "/assets/CV_Alexis_Maugain.png";
 
 const contactInfo = [
   {

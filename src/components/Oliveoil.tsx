@@ -24,7 +24,7 @@ export function Oliveoil() {
       {/* Hero Section */}
       <section className="relative h-[70vh] overflow-hidden">
         <img
-          src="./src/assets/projets/olive-oil.png"
+          src="/assets/projets/olive-oil.png"
           alt="Olive Oil Project"
           className="w-full h-full object-cover"
         />
@@ -283,7 +283,7 @@ export function Oliveoil() {
                 className="rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow"
               >
                 <img
-                  src="./src/assets/projets/olive-oil.png"
+                  src="/assets/projets/olive-oil.png"
                   alt="Olive Oil Design"
                   className="w-full h-auto"
                 />
