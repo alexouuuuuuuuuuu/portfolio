@@ -114,7 +114,7 @@ export function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
                   className="relative w-[200px] h-[200px] flex items-center justify-center"
                 >
                   <motion.img
-                    src="/assets/logo.png"
+                    src="./assets/logo.png"
                     alt="Logo Alexis Maugain"
                     className="w-[150px] h-[150px] object-contain"
                     initial={{ filter: "brightness(0.5) blur(10px)" }}
