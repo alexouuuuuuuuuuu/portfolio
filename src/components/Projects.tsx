@@ -9,13 +9,13 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 const projects = [
   {
     id: 1,
-    title: "Refonte UI/UX E-commerce",
-    description: "Conception d'une interface moderne pour une plateforme de vente en ligne avec parcours utilisateur optimisé.",
-    fullDescription: "Projet de refonte complète d'une plateforme e-commerce avec focus sur l'expérience utilisateur. J'ai réalisé une étude approfondie des parcours utilisateurs, créé des wireframes, des maquettes haute-fidélité et un prototype interactif. Le design met l'accent sur la simplicité, la clarté et l'accessibilité pour maximiser les conversions.",
+    title: "One page pour Olive Oil",
+    description: "créer un site internet pour une marque d'huile d'olive reflétant leur encrage territorial ainsi que l'univers prestigieux de la marque",
+    fullDescription: "Olive Oil, marque d'huile d'olive 100 % italienne, lance sa nouvelle huile premium avec des ingrédients haut de gamme. Pour accompagner ce lancement, ils souhaitent créer un site internet reflétant leur encrage territorial ainsi que l'univers prestigieux de la marque, destiné à une clientèle exigeante. Le design du site devra être élégant, moderne et raffiné, tout en respectant l'identité visuelle existante (couleurs, typographie, logo).Le contenu présentera de manière claire et originale la marque, ses valeurs et son produit. L'expérience utilisateur devra inciter à l’achat, tout en véhiculant une ambiance exclusive et sophistiquée.",
     technologies: ["Figma", "Prototyping", "User Research"],
-    category: "UI/UX",
+    categories: ["UI/UX"], 
     image: "./src/assets/projets/olive-oil.png",
-    link: "#",
+    link: "./Oliveoil.html",
     size: "large",
   },
   {
@@ -23,8 +23,8 @@ const projects = [
     title: "Produire du contenu multimédia",
     description: "J'ai choisi l'univers de Subway Surfer pour ce projet.",
     fullDescription: "Il nous a été demandé de créer, développer et promouvoir un site web e-commerce inspiré des plateformes comme Le Bon Coin, Vinted, … adapté à l'univers d'un jeu vidéo emblématique de votre choix (par exemple : Mario, Zelda, etc.). ",
-    technologies: ["HTML", "CSS", "JavaScript", "Motion"],
-    category: "3D",
+    technologies: ["HTML", "CSS", "JavaScript", "Blender", "After Effects"],
+    categories: ["3D", "UI/UX", "Web design", "Vidéo"], 
     image: "./src/assets/projets/subway-surfer.png",
     link: "#",
     size: "medium",
@@ -35,7 +35,7 @@ const projects = [
     description: "Réalisation d'une vidéo de présentation dynamique avec motion design et effets visuels.",
     fullDescription: "Production complète d'une vidéo promotionnelle incluant le storyboard, le tournage, le montage et les effets spéciaux. J'ai créé des animations motion design pour dynamiser le message et captiver l'audience. Le projet a nécessité une coordination étroite avec le client pour respecter sa vision.",
     technologies: ["Premiere Pro", "After Effects", "Illustrator"],
-    category: "Vidéo",
+    categories: ["Vidéo"],
     image: "./src/assets/projets/pokeduel.png",
     link: "#",
     size: "medium",
@@ -43,10 +43,10 @@ const projects = [
   {
     id: 4,
     title: "Créer pour une campagne de communication visuelle",
-    description: "Campagne de communication visuelle pour la création d’un “Bar à thème”",
-    fullDescription: "Il nous a été demandé de créer et de mettre en place une campagne de communication visuelle pour la création d’un 'Bar à thème'. Le thème du bar et la ville m'ont été imposés : Bar médiéval à Anvers en Belgique.",
+    description: "Campagne de communication visuelle pour la création d'un 'Bar à thème'",
+    fullDescription: "Il nous a été demandé de créer et de mettre en place une campagne de communication visuelle pour la création d'un 'Bar à thème'. Le thème du bar et la ville m'ont été imposés : Bar médiéval à Anvers en Belgique.",
     technologies: ["Figma", "Prototyping", "Benchmarking"],
-    category: "UI/UX",
+    categories: ["UI/UX", "Communication visuelle"], 
     image: "./src/assets/projets/lebarbare.png",
     link: "#",
     size: "tall",
@@ -57,7 +57,7 @@ const projects = [
     description: "Développement complet d'une charte graphique incluant logo, typographie et palette de couleurs.",
     fullDescription: "Création d'une identité visuelle complète pour une startup innovante. Le projet englobait la conception du logo, le choix de la typographie, la définition de la palette de couleurs et la création d'un guide de style. J'ai également développé des supports de communication print et digital.",
     technologies: ["Illustrator", "InDesign", "Photoshop"],
-    category: "Communication visuelle",
+    categories: ["Communication visuelle"],
     image: "./src/assets/projets/glow-pong.png",
     link: "#",
     size: "medium",
@@ -68,7 +68,7 @@ const projects = [
     description: "Promouvoir l'évenement du Digital Clean Up.",
     fullDescription: "Le prochain événement du Digital Clean Up aura lieu le 25 mars 2025. Pour l'occasion, l'organisation souhaite cibler les moins de 25 ans. Il nous a donc été demandé de promouvoir cette action.",
     technologies: ["Figma", "Prototyping", "Stratégie de communication", "Newsletter", "Réseaux sociaux"],
-    category: "Communication visuelle",
+    categories: ["Communication visuelle"],
     image: "./src/assets/projets/digital-cleanup.png",
     link: "#",
     size: "medium",
@@ -77,32 +77,32 @@ const projects = [
     id: 7,
     title: "Concevoir des visualisations de données pour le web",
     description: "Suite à une collaboration avec OpenData University, nous avons créé un ensemble de supports numériques",
-    fullDescription: "Dans le cadre d’une collaboration avec OpenData University, nous avez été sollicités pour créer un ensemble de supports numériques en groupe de trois visant à informer et sensibiliser le public sur un des thèmes liés à la culture.",
+    fullDescription: "Dans le cadre d'une collaboration avec OpenData University, nous avez été sollicités pour créer un ensemble de supports numériques en groupe de trois visant à informer et sensibiliser le public sur un des thèmes liés à la culture.",
     technologies: ["GSAP", "HTML", "CSS", "Figma"],
-    category: "Web design",
+    categories: ["Web design"],
     image: "./src/assets/projets/data-visualisation.png",
     link: "#",
     size: "tall",
   },
   {
     id: 8,
-    title: "Créer un site WordPress de type “click & collect”",
+    title: "Créer un site WordPress de type 'click & collect'",
     description: "Nous avons choisi de travailler sur Daniel Wellington, une marque suédoise renommée pour ses montres élégantes et minimalistes",
-    fullDescription: "Il nous a été demandé par binômes de concevoir et de développer des parcours utilisateurs au sein d'un système d'information, en combinant le développement web, le design d'expérience et la gestion de projet. Nous devions créer un site WordPress de type “click & collect” pour une enseigne choisie en gardant la même charte graphique.",
+    fullDescription: "Il nous a été demandé par binômes de concevoir et de développer des parcours utilisateurs au sein d'un système d'information, en combinant le développement web, le design d'expérience et la gestion de projet. Nous devions créer un site WordPress de type \"click & collect\" pour une enseigne choisie en gardant la même charte graphique.",
     technologies: ["WordPress", "Figma", "user flows", "Wireframes"],
-    category: "UI/UX",
+    categories: ["UI/UX"],
     image: "./src/assets/projets/danniel-wellington.png",
     link: "#",
     size: "large",
   },
   {
     id: 9,
-    title: "Dashboard Analytique",
-    description: "Interface d'administration pour la visualisation de données complexes avec graphiques interactifs.",
-    fullDescription: "Conception d'un dashboard complet pour la gestion et l'analyse de données. J'ai créé une hiérarchie visuelle claire, intégré des graphiques interactifs et optimisé l'expérience pour les utilisateurs professionnels. Le design privilégie la lisibilité et l'efficacité.",
-    technologies: ["Figma", "Data Visualization", "Adobe XD"],
-    category: "UI/UX",
-    image: "https://images.unsplash.com/photo-1575388902449-6bca946ad549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzYxMDU0MDQ1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    title: "Nuit du Code",
+    description: "Création d’un mini-jeu p5.js et d’une landing page sobre pour sensibiliser à la pollution numérique.",
+    fullDescription: "Projet réalisé dans le cadre de la Nuit MMI 2025 : conception d’un jeu interactif en p5.js mettant en scène les gestes permettant de réduire la pollution numérique, ainsi que d’une landing page entièrement en anglais présentant le projet et les pistes d’amélioration pour une version 2. Le travail inclut une hiérarchie visuelle simple et efficace, une attention portée à la sobriété numérique (optimisation du poids des fichiers, limitation des médias lourds) et une mise en page pensée pour la clarté et l’impact pédagogique.",
+    technologies: ["Figma", "p5.js", "HTML/CSS"],
+    categories: ["UI/UX", "Web design"],
+    image: "./src/assets/projets/nuitcode.png",
     link: "#",
     size: "medium",
   },
@@ -112,7 +112,7 @@ const projects = [
     description: "Production d'un clip vidéo avec animations 2D et effets de transition créatifs.",
     fullDescription: "Réalisation complète d'un clip musical mêlant prises de vues réelles et animations 2D. J'ai conçu le storyboard, animé les séquences graphiques et assuré le montage final. Le projet demandait une synchronisation parfaite avec la musique et un style visuel unique.",
     technologies: ["After Effects", "Premiere Pro", "Illustrator"],
-    category: "Vidéo",
+    categories: ["Vidéo", "3D"], 
     image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMGVkaXRpbmclMjB0aW1lbGluZXxlbnwxfHx8fDE3NjA5NTY3NTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     link: "#",
     size: "medium",
@@ -123,7 +123,7 @@ const projects = [
     description: "Visualisation architecturale 3D d'un bâtiment contemporain avec environnement paysager.",
     fullDescription: "Création de rendus architecturaux photoréalistes pour un projet immobilier. J'ai modélisé l'ensemble du bâtiment et de son environnement, travaillé l'éclairage naturel et créé plusieurs vues pour présenter le projet sous différents angles. Les rendus ont été utilisés pour la communication commerciale.",
     technologies: ["Blender", "V-Ray", "Photoshop"],
-    category: "3D",
+    categories: ["3D"],
     image: "https://images.unsplash.com/photo-1668672355709-a2f199a65201?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzZCUyMGFyY2hpdGVjdHVyZSUyMHJlbmRlcnxlbnwxfHx8fDE3NjEwNTQwNDd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     link: "#",
     size: "medium",
@@ -134,7 +134,7 @@ const projects = [
     description: "Série de posters et affiches publicitaires pour une campagne de communication urbaine.",
     fullDescription: "Conception d'une campagne d'affichage complète avec déclinaison sur différents formats. J'ai développé un concept visuel fort, créé les visuels et adapté les créations aux contraintes techniques de l'affichage urbain. Le projet incluait aussi la déclinaison digitale pour les réseaux sociaux.",
     technologies: ["Photoshop", "Illustrator", "InDesign"],
-    category: "Communication visuelle",
+    categories: ["Communication visuelle"],
     image: "https://images.unsplash.com/photo-1621974714993-465ae51a4483?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3N0ZXIlMjBkZXNpZ24lMjBncmFwaGljfGVufDF8fHx8MTc2MDkzNzYyNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     link: "#",
     size: "medium",
@@ -147,9 +147,10 @@ export function Projects() {
   const [activeCategory, setActiveCategory] = useState("Tous");
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   
+  // Updated filter logic to check if project categories include the active category
   const filteredProjects = activeCategory === "Tous" 
     ? projects 
-    : projects.filter(p => p.category === activeCategory);
+    : projects.filter(p => p.categories.includes(activeCategory));
 
   return (
     <section className="py-20 bg-white relative overflow-hidden" id="projects">
@@ -246,9 +247,14 @@ export function Projects() {
 
                   {/* Content overlay */}
                   <div className="relative h-full flex flex-col justify-end p-4 text-white">
-                    <Badge className="bg-white/20 backdrop-blur-md text-white border-white/30 mb-2 w-fit text-xs">
-                      {project.category}
-                    </Badge>
+                    {/* Display all categories as badges */}
+                    <div className="flex flex-wrap gap-1 mb-2">
+                      {project.categories.map((cat) => (
+                        <Badge key={cat} className="bg-white/20 backdrop-blur-md text-white border-white/30 w-fit text-xs">
+                          {cat}
+                        </Badge>
+                      ))}
+                    </div>
                     
                     <CardTitle className="mb-1 text-white group-hover:text-[#CCE0F5] transition-colors text-lg leading-tight">
                       {project.title}
@@ -305,10 +311,12 @@ export function Projects() {
                     alt={selectedProject.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 left-4">
-                    <Badge className="bg-primary text-white">
-                      {selectedProject.category}
-                    </Badge>
+                  <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+                    {selectedProject.categories.map((cat) => (
+                      <Badge key={cat} className="bg-primary text-white">
+                        {cat}
+                      </Badge>
+                    ))}
                   </div>
                 </div>
                 <DialogTitle className="text-2xl">{selectedProject.title}</DialogTitle>
