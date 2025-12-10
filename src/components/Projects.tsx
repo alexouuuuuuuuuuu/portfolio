@@ -161,10 +161,7 @@ export function Projects() {
 
   return (
     <section className="py-20 bg-white relative overflow-hidden" id="projects">
-      {/* Background decoration */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"></div>
-
+      
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <SectionTitle subtitle="Découvrez une sélection de mes réalisations en design graphique, développement web et création de contenu multimédia.">

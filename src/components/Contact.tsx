@@ -73,9 +73,6 @@ export function Contact() {
 
   return (
     <section className="py-20 bg-white relative overflow-hidden" id="contact">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-accent/30 to-secondary/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-secondary/20 to-accent/20 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
