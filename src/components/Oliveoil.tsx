@@ -6,6 +6,10 @@ import { Navigation } from "./Navigation";
 export function Oliveoil() {
   const navigate = useNavigate();
 
+  const handleHomeClick = () => {
+    window.location.href = "/portfolio/";
+  };
+
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
@@ -76,15 +80,15 @@ export function Oliveoil() {
         </div>
       </section>
 
-      {/* Info Section */}
-      <section className="bg-gradient-to-b from-primary to-secondary text-white py-12">
-        <div className="container mx-auto max-w-6xl px-4">
+     {/* Info Section */}
+      <section className="bg-gradient-to-br from-primary to-secondary text-white py-16 md:py-24 mb-20">
+        <div className="container mx-auto max-w-6xl p-4">
           <motion.div
             variants={staggerChildren}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            className="flex flex-row justify-center items-center gap-8"
           >
             {/* Durée */}
             <motion.div variants={fadeInUp} className="flex items-start gap-4">
@@ -186,61 +190,77 @@ export function Oliveoil() {
             </motion.div>
           </motion.section>
 
-          {/* Etapes du projet */}
-          <motion.section
+            {/* Etapes du projet - version plus esthétique */}
+            <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mb-20"
-          >
-            <h2 className="text-4xl font-bold mb-8 text-primary">Etapes du projet</h2>
-            <div className="space-y-8">
+            >
+            <h2 className="text-4xl font-bold mb-8 text-primary">Étapes du projet</h2>
+
+            <div className="gap-8 flex flex-col">
               {[
-                {
-                  step: "01",
-                  title: "Recherche & Analyse",
-                  description: "Étude de la concurrence, analyse de la cible et définition du positionnement"
-                },
-                {
-                  step: "02",
-                  title: "Wireframing",
-                  description: "Création de maquettes basse-fidélité pour définir la structure et l'architecture de l'information"
-                },
-                {
-                  step: "03",
-                  title: "Design UI",
-                  description: "Conception des maquettes haute-fidélité en respectant l'identité visuelle de la marque"
-                },
-                {
-                  step: "04",
-                  title: "Prototypage",
-                  description: "Création d'un prototype interactif pour tester les parcours utilisateurs"
-                }
-              ].map((phase, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex gap-6 items-start"
-                >
-                  <div className="text-5xl font-bold text-accent/20 min-w-[80px]">
-                    {phase.step}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold mb-2 text-primary">
-                      {phase.title}
-                    </h3>
-                    <p className="text-lg text-gray-600">
-                      {phase.description}
-                    </p>
-                  </div>
-                </motion.div>
+              {
+                step: "01",
+                title: "Recherche & Analyse",
+                description:
+                "Étude de la concurrence, analyse de la cible et définition du positionnement"
+              },
+              {
+                step: "02",
+                title: "Wireframing",
+                description:
+                "Création de maquettes basse-fidélité pour définir la structure et l'architecture de l'information"
+              },
+              {
+                step: "03",
+                title: "Design UI",
+                description:
+                "Conception des maquettes haute-fidélité en respectant l'identité visuelle de la marque"
+              },
+              {
+                step: "04",
+                title: "Prototypage",
+                description:
+                "Création d'un prototype interactif pour tester les parcours utilisateurs"
+              }
+              ].map((phase, index, arr) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -12 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08, type: "spring", stiffness: 80 }}
+                className="flex gap-6 items-start"
+              >
+                {/* Timeline / Number */}
+                <div className="flex flex-col items-center">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-accent to-accent-light text-white flex items-center justify-center text-lg font-semibold shadow-lg transform-gpu">
+                  {phase.step}
+                </div>
+                {index < arr.length - 1 && (
+                  <div className="w-px h-12 bg-accent-light/20 mt-4 rounded" />
+                )}
+                </div>
+
+                {/* Card */}
+                <div className="flex-1 p-6 bg-white/6 backdrop-blur-sm rounded-2xl border border-white/6 hover:shadow-lg transition-all">
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="text-2xl font-semibold mb-2 text-primary">
+                  {phase.title}
+                  </h3>
+                  <span className="text-sm text-accent/80 font-medium">{index + 1}/{arr.length}</span>
+                </div>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  {phase.description}
+                </p>
+                </div>
+              </motion.div>
               ))}
             </div>
-          </motion.section>
+            </motion.section>
 
           {/* Technologies */}
           <motion.section
@@ -321,8 +341,8 @@ export function Oliveoil() {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <button
-              onClick={() => navigate("/#projects")}
-              className="px-8 py-4 bg-gray-200 text-primary rounded-xl hover:bg-gray-300 transition-all text-lg font-semibold"
+              onClick={handleHomeClick}
+              className="cursor-pointer px-8 py-6 bg-gray-300 text-primary rounded-xl hover:bg-gray-200 transition-all text-lg font-semibold"
             >
               ← Retour aux projets
             </button>
@@ -330,7 +350,7 @@ export function Oliveoil() {
               href="https://www.figma.com/proto/your-prototype-link"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl hover:shadow-2xl transition-all text-lg font-semibold flex items-center justify-center gap-2 hover:-translate-y-1"
+              className="px-8 py-6 bg-gradient-to-r from-primary to-secondary text-white rounded-xl hover:shadow-2xl transition-all text-lg font-semibold flex items-center justify-center gap-2 hover:-translate-y-1"
             >
               <span>Voir le prototype</span>
               <ExternalLink className="w-5 h-5" />
@@ -354,7 +374,7 @@ export function Oliveoil() {
           </p>
           <button
             onClick={() => navigate("/#projects")}
-            className="inline-block px-8 py-4 bg-white text-primary rounded-xl hover:bg-white/90 transition-all text-lg font-semibold"
+            className="inline-block px-8 py-6 bg-white text-primary rounded-xl hover:bg-white/90 transition-all text-lg font-semibold"
           >
             Voir tous les projets
           </button>
