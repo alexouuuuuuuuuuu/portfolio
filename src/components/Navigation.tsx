@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Logo } from "./Logo";
 
 const navItems = [
@@ -13,6 +14,7 @@ const navItems = [
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +37,10 @@ export function Navigation() {
     }
   };
 
+  const handleHomeClick = () => {
+    window.location.href = "/portfolio/";
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -49,7 +55,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <motion.button
-            onClick={() => scrollToSection("#home")}
+            onClick={handleHomeClick}
             whileHover={{ scale: 1.05 }}
             className="z-50"
           >
