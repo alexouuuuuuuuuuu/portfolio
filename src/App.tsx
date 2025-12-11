@@ -10,9 +10,8 @@ import { LoadingScreen } from "./components/LoadingScreen";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Oliveoil } from "./components/Oliveoil";
 
-export default function App() {
+function HomePage() {
   const projectsRef = useRef<HTMLDivElement>(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   const scrollToProjects = () => {
     const projectsSection = document.querySelector("#projects");
@@ -20,10 +19,6 @@ export default function App() {
       projectsSection.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  if (isLoading) {
-    return <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />;
-  }
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
@@ -49,5 +44,22 @@ export default function App() {
       
       <Toaster position="bottom-right" />
     </div>
+  );
+}
+
+export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  if (isLoading) {
+    return <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />;
+  }
+
+  return (
+    <BrowserRouter basename="/portfolio">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/oliveoil" element={<Oliveoil />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

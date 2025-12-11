@@ -5,6 +5,7 @@ import { ExternalLink, X } from "lucide-react";
 import { SectionTitle } from "./SectionTitle";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
@@ -15,7 +16,7 @@ const projects = [
     technologies: ["Figma", "Prototyping", "User Research"],
     categories: ["UI/UX"], 
     image: "./assets/projets/olive-oil.png",
-    link: "./pages/Oliveoil.html",
+    projectRoute: "oliveoil",
     size: "large",
   },
   {
@@ -151,6 +152,7 @@ const projects = [
 const categories = ["Tous", "UI/UX", "Web design", "Vidéo", "3D", "Communication visuelle"];
 
 export function Projects() {
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState("Tous");
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   
@@ -158,6 +160,12 @@ export function Projects() {
   const filteredProjects = activeCategory === "Tous" 
     ? projects 
     : projects.filter(p => p.categories.includes(activeCategory));
+
+  const handleProjectClick = (project: typeof projects[0]) => {
+    if (project.projectRoute) {
+      navigate(`/${project.projectRoute}`);
+    }
+  };
 
   return (
     <section className="py-20 bg-white relative overflow-hidden" id="projects">
@@ -358,13 +366,16 @@ export function Projects() {
                   >
                     Fermer
                   </button>
-                  <a
-                    href={selectedProject.link}
+                  <button
+                    onClick={() => {
+                      handleProjectClick(selectedProject);
+                      setSelectedProject(null);
+                    }}
                     className="flex-1 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition-all flex items-center justify-center gap-2"
                   >
                     <span>Voir le projet</span>
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </button>
                 </div>
               </div>
             </>

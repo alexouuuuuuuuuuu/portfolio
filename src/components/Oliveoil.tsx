@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Calendar, Users, Target } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Navigation } from "./Navigation";
 
 export function Oliveoil() {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ export function Oliveoil() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative h-[70vh] overflow-hidden">
         <img
@@ -35,7 +37,7 @@ export function Oliveoil() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
-          onClick={() => navigate("/#projects")}
+          onClick={() => navigate("/")}
           className="absolute top-28 left-8 w-14 h-14 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all flex items-center justify-center group z-10"
         >
           <ArrowLeft className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
