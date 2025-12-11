@@ -27,13 +27,30 @@ export function Navigation() {
 
   const scrollToSection = (href: string) => {
     setIsOpen(false);
-    if (href === "#home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+    
+    // Si on est sur la page d'accueil, scroller directement
+    if (window.location.pathname === "/") {
+      if (href === "#home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
       }
+    } else {
+      // Si on est sur une autre page, aller à la page d'accueil puis scroller
+      navigate("/");
+      setTimeout(() => {
+        if (href === "#home") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }, 100);
     }
   };
 

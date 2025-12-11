@@ -2,9 +2,14 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Calendar, Users, Target } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Navigation } from "./Navigation";
+import { useEffect } from "react";
 
 export function Oliveoil() {
   const navigate = useNavigate();
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleHomeClick = () => {
     window.location.href = "/portfolio/";
