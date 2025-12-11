@@ -25,11 +25,29 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Vérifier si on doit scroller à une section au chargement
+  useEffect(() => {
+    const scrollToSection = sessionStorage.getItem("scrollToSection");
+    if (scrollToSection) {
+      sessionStorage.removeItem("scrollToSection");
+      setTimeout(() => {
+        if (scrollToSection === "#home") {
+          window.scrollTo({ top: 0 });
+        } else {
+          const element = document.querySelector(scrollToSection);
+          if (element) {
+            element.scrollIntoView();
+          }
+        }
+      }, 100);
+    }
+  }, []);
+
   const scrollToSection = (href: string) => {
     setIsOpen(false);
     
     // Si on est sur la page d'accueil, scroller directement
-    if (window.location.pathname === "/") {
+    if (window.location.pathname === "/portfolio/" || window.location.pathname === "/portfolio") {
       if (href === "#home") {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
@@ -39,18 +57,9 @@ export function Navigation() {
         }
       }
     } else {
-      // Si on est sur une autre page, aller à la page d'accueil puis scroller
-      navigate("/");
-      setTimeout(() => {
-        if (href === "#home") {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        } else {
-          const element = document.querySelector(href);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }
-      }, 100);
+      // Si on est sur une autre page, stocker la section dans sessionStorage et aller à l'accueil
+      sessionStorage.setItem("scrollToSection", href);
+      window.location.href = "/portfolio/";
     }
   };
 

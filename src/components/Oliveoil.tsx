@@ -33,7 +33,7 @@ export function Oliveoil() {
     <div className="min-h-screen bg-white">
       <Navigation />
       {/* Hero Section */}
-      <section className="relative h-[70vh] overflow-hidden">
+      <section className="relative h-[35vh] overflow-hidden">
         <img
           src="./assets/projets/olive-oil.png"
           alt="Olive Oil Project"
@@ -378,8 +378,11 @@ export function Oliveoil() {
             Découvrez mes autres projets ou contactez-moi
           </p>
           <button
-            onClick={() => navigate("/#projects")}
-            className="inline-block px-8 py-6 bg-white text-primary rounded-xl hover:bg-white/90 transition-all text-lg font-semibold"
+            onClick={() => {
+              sessionStorage.setItem("scrollToSection", "#projects");
+              window.location.href = "/portfolio/";
+            }}
+            className="cursor-pointer inline-block px-8 py-6 bg-white text-primary rounded-xl hover:bg-white/90 transition-all text-lg font-semibold"
           >
             Voir tous les projets
           </button>
